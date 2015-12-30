@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+require 'trollop'
+require 'catoradd'
+
+opts = Trollop::options do
+  version "catoradd 0.0.x"
+  opt :add, "Add two numbers"                    
+  opt :cat, "Concatenate two strings"
+  banner <<-EOS
+You can add numbers or concatenate strings with this handy utility.
+
+Usage:
+  catoradd --add 1 2
+  catoradd --cat One Two
+EOS
+end
+
+# the remaining positional args are our values
+value_one = ARGV[0]
+value_two = ARGV[1]
+
+if opts.add
+  puts CatOrAdd.add(value_one,value_two)
+elsif opts.cat
+  puts CatOrAdd.cat(value_one,value_two)
+end
