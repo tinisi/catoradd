@@ -11,3 +11,4 @@ http://guides.rubygems.org/make-your-own-gem/#your-first-gem
 [ ] Add error checking for values
 	* two exactly (?)
 	* must be coercible to appropriate type
+	* how about strict flag?

@@ -19,8 +19,10 @@ end
 value_one = ARGV[0]
 value_two = ARGV[1]
 
+cora = CatOrAdd.new
+
 if opts.add
-  puts CatOrAdd.add(value_one,value_two)
+  puts cora.add(value_one,value_two)
 elsif opts.cat
-  puts CatOrAdd.cat(value_one,value_two)
+  puts cora.cat(value_one,value_two)
 end
