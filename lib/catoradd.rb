@@ -1,9 +1,13 @@
 
 class CatOrAdd
-  def add(first,second)
-    first.to_i + second.to_i
+  def initialize(first,second)
+    @first = first
+    @second = second
   end
-  def cat(first,second)
-    "#{first.to_s}#{second.to_s}"
+  def add()
+    @first.to_i + @second.to_i
+  end
+  def cat()
+    "#{@first.to_s}#{@second.to_s}"
   end
 end

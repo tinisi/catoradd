@@ -2,16 +2,17 @@
 require 'spec_helper'
 
 describe CatOrAdd do
-  let(:cora) { CatOrAdd.new }
   describe "#cat" do
     it "concatenates two strings" do
-      result = cora.cat("this","that")
+      cora = CatOrAdd.new "this", "that"
+      result = cora.cat()
       expect(result).to eql "thisthat"
     end
   end
   describe "#add" do
     it "adds two numbers" do
-      result = cora.add(1,2)
+      cora = CatOrAdd.new 1, 2
+      result = cora.add()
       expect(result).to eql 3
     end
   end
